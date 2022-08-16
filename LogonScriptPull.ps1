@@ -1,0 +1,1 @@
+﻿get-aduser -filter * -Properties ScriptPath | where ScriptPath -ne $null | select name, ScriptPath | sort name | export-csv C:\temp\logonscript.csv -notypeinformation
